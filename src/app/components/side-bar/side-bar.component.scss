@@ -1,0 +1,14 @@
+.side_bar-back {
+  background-color: #e1e5ea;
+  height: 90vh;
+}
+
+.list>li {
+  display: flex;
+  align-items: center;
+}
+
+.list>li>* {
+  margin: 0 0.2rem;
+  font-size: 1.5rem;
+}
