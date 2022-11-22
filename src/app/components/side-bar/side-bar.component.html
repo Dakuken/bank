@@ -3,13 +3,14 @@
 
 
   <nav *ngIf="test === 'show'" [@animateContentSideBar]>
-    <ul class="list">
-      <div *ngFor="let item of tab" class=" {{item.path}}" (click)="redirectTo(item.path)">
-        <li class=" mx-4 sm:mx-8  my-2 " [ngClass]="{'active' : item.path  === path}">
-          <mat-icon class="icon">{{item.icon}}</mat-icon>
-          <p>{{item.word}}</p>
+    <ul class="list mx-1">
+      <div *ngFor="let item of tab" class=" {{item.icon}}" [ngClass]="{'my-4' : isMobile }" (click)="redirectTo(item.path)">
+        <li class=" sm:mx-1 " [ngClass]="{'active' : item.path  === path}">
+
+          <mat-icon class="text-5xl sm:text-3xl  sm:mx-4">{{item.icon}}</mat-icon>
+          <p *ngIf=" !isMobile" class="text-xl mx-4 pt-1">{{item.word}}</p>
         </li>
-        <div *ngIf="item.path !== 'logout'" class="w-full border-b border-black-perso"></div>
+        <div *ngIf="item.path !== '/logout'" class="w-full border-b border-black-perso mb-4"></div>
       </div>
     </ul>
   </nav>

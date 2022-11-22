@@ -23,6 +23,7 @@ import { getAnimations } from './side-bar.animations';
 export class SideBarComponent {
   path: string = ''
   isHide: boolean = true
+  isMobile = matchMedia("(max-width: 640px)").matches;
   tab = [{ path: '/home', icon: "dashboard", word: 'Dashboard' }, { path: '/bank', icon: "device_hub", word: 'Connect to bank' }, { path: '/logout', icon: "logout", word: 'Log out' }]
   test = 'hide'
   constructor(private router: Router) {

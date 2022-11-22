@@ -15,7 +15,7 @@ nav {
 
 .list>div>li {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   cursor: pointer;
 
   &:hover {
@@ -25,11 +25,6 @@ nav {
       color: #3366FF;
     }
   }
-}
-
-.list>div>li>* {
-  margin: 0 0.2rem;
-  font-size: 1.5rem;
 }
 
 .list>div>li>mat-icon {
