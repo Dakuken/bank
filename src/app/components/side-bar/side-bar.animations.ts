@@ -10,14 +10,14 @@ const mobileAnimations = [
       width: '60px',
     })),
     state('show', style({
-      height: '90vh',
+      height: '85vh',
       minWidth: '60px'
     })),
     transition('hide => show', [
       animate("0.150s", keyframes([
         style({ height: '60px', offset: 0 }),
         style({ height: '50vh', offset: 0.4 }),
-        style({ height: '90vh', offset: 1 })
+        style({ height: '85vh', offset: 1 })
       ])),
       group([query('@animateContentSideBar', animateChild()),
       ]),
@@ -41,7 +41,7 @@ const desktopAnimations = [
       width: '60px',
     })),
     state('show', style({
-      height: '90vh',
+      height: '95vh',
       minWidth: '20rem',
       maxWidth: '400px'
     })),
@@ -49,7 +49,7 @@ const desktopAnimations = [
       animate("0.150s", keyframes([
         style({ minWidth: '60px', height: '60px', offset: 0 }),
         style({ minWidth: '10rem', height: '50vh', offset: 0.4 }),
-        style({ minWidth: '20rem', height: '90vh', offset: 1 })
+        style({ minWidth: '20rem', height: '95vh', offset: 1 })
       ])),
       group([query('@animateContentSideBar', animateChild()),
       ]),

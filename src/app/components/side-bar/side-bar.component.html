@@ -4,11 +4,11 @@
 
   <nav *ngIf="test === 'show'" [@animateContentSideBar]>
     <ul class="list mx-1">
-      <div *ngFor="let item of tab" class=" {{item.icon}}" [ngClass]="{'my-4' : isMobile }" (click)="redirectTo(item.path)">
+      <div *ngFor="let item of tab" class=" {{item.icon}}" (click)="redirectTo(item.path)">
         <li class=" sm:mx-1 " [ngClass]="{'active' : item.path  === path}">
 
-          <mat-icon class="text-5xl sm:text-3xl  sm:mx-4">{{item.icon}}</mat-icon>
-          <p *ngIf=" !isMobile" class="text-xl mx-4 pt-1">{{item.word}}</p>
+          <mat-icon class="text-5xl mb-8 sm:mb-0 sm:text-3xl  sm:mx-4">{{item.icon}}</mat-icon>
+          <p *ngIf=" !isMobile" class="text-xl py-1">{{item.word}}</p>
         </li>
         <div *ngIf="item.path !== '/logout'" class="w-full border-b border-black-perso mb-4"></div>
       </div>

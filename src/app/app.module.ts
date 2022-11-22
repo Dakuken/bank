@@ -11,13 +11,17 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BankComponent } from './pages/bank/bank.component';
 import { LogOutComponent } from './pages/log-out/log-out.component';
+import { SoldeActuelComponent } from './pages/home/components/solde-actuel/solde-actuel.component';
+import { DepensesComponent } from './pages/home/components/depenses/depenses.component';
 @NgModule({
   declarations: [
     AppComponent,
     SideBarComponent,
     HomeComponent,
     BankComponent,
-    LogOutComponent
+    LogOutComponent,
+    SoldeActuelComponent,
+    DepensesComponent
   ],
   imports: [
     BrowserModule,
