@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
+
+
+  title = 'bank';
   constructor(private router: Router) {
     this.router.navigate(['/home'])
   }
 
-  title = 'bank';
 }

@@ -1,22 +1,16 @@
-<div class="side_bar-back w-80 rounded-3xl drop-shadow-xl mx-4">
-  <div class="p-6">
-    <svg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0.5 23.25V21H21V23.25H0.5ZM0.5 13.15V10.85H30V13L0.5 13.15ZM0.5 3V0.75H35.5V3H0.5Z" fill="black" />
-    </svg>
-  </div>
+<div [@animeSideBar]="test" class="side_bar-back rounded-3xl drop-shadow-xl">
+  <mat-icon class="menu" (click)="changeTest()">menu</mat-icon>
 
-  <nav>
+
+  <nav *ngIf="test === 'show'" [@animateContentSideBar]>
     <ul class="list">
       <div *ngFor="let item of tab" class=" {{item.path}}" (click)="redirectTo(item.path)">
-        <li class="mx-8 my-2 " [ngClass]="{'active' : item.path  === path}">
+        <li class=" mx-4 sm:mx-8  my-2 " [ngClass]="{'active' : item.path  === path}">
           <mat-icon class="icon">{{item.icon}}</mat-icon>
           <p>{{item.word}}</p>
         </li>
-
         <div *ngIf="item.path !== 'logout'" class="w-full border-b border-black-perso"></div>
       </div>
     </ul>
   </nav>
-
-
 </div>
