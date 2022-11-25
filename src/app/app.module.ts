@@ -14,6 +14,8 @@ import { LogOutComponent } from './pages/log-out/log-out.component';
 import { SoldeActuelComponent } from './pages/home/components/solde-actuel/solde-actuel.component';
 import { DepensesComponent } from './pages/home/components/depenses/depenses.component';
 import { HistoriqueComponent } from './pages/historique/historique.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoaderModule } from './components/loader/loader.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,14 +25,16 @@ import { HistoriqueComponent } from './pages/historique/historique.component';
     LogOutComponent,
     SoldeActuelComponent,
     DepensesComponent,
-    HistoriqueComponent
+    HistoriqueComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    HttpClientModule,
+    LoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

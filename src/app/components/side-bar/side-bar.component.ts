@@ -12,10 +12,10 @@ import { getAnimations } from './side-bar.animations';
   trigger('animateContentSideBar', [
     transition(':enter', [
       style({ opacity: 0 }),
-      animate('0.2s', style({ opacity: 1 }),)
+      animate('0.3s', style({ opacity: 1 }),)
     ]),
     transition(':leave', [
-      animate('0.1s', style({ opacity: 0 }),)
+      animate('0.150s', style({ opacity: 0 }),)
     ]),
   ]),
   ]

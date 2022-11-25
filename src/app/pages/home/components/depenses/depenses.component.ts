@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import Transaction from 'src/app/interface/transaction.interface';
 
 @Component({
   selector: 'app-depenses',
@@ -7,6 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./depenses.component.scss']
 })
 export class DepensesComponent implements OnInit {
+  @Input() isLoaded: boolean = false
+  @Input() transactions: Transaction[] = []
   date = new Date();
   hier = this.date.setUTCDate(this.date.getUTCDate() - 1)
   tab = [
